@@ -122,7 +122,7 @@ export default function CarList() {
       <div className="flex flex-col space-y-6">
         <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center space-y-4 sm:space-y-0">
           <div>
-            <h1 className="text-3xl font-bold dark:text-white">
+            <h1 className="text-3xl font-bold  dark:text-gray-500">
               Find Your Perfect Car
             </h1>
             <p className="text-gray-600 dark:text-gray-400 mt-1">
@@ -144,8 +144,8 @@ export default function CarList() {
                 onClick={() => setViewMode("grid")}
                 className={`px-3 py-1.5 rounded-md ${
                   viewMode === "grid"
-                    ? "bg-white dark:bg-gray-700 shadow-sm"
-                    : "text-gray-600 dark:text-gray-400"
+                    ? "bg-white dark:bg-gray-700 shadow-sm text-white"
+                    : "text-gray-500 dark:text-gray-500"
                 }`}
               >
                 Grid
@@ -167,7 +167,7 @@ export default function CarList() {
               <select
                 value={sortBy}
                 onChange={(e) => handleSortChange(e.target.value)}
-                className="form-select text-sm bg-transparent border-gray-300 dark:border-gray-700 rounded-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:text-white"
+                className="form-select text-sm bg-transparent border-gray-300 dark:border-gray-700 rounded-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:text-white p-3"
               >
                 <option value="">Default</option>
                 <option value="price_asc">Price: Low to High</option>
